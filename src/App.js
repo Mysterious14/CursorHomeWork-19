@@ -8,6 +8,7 @@ function App() {
   return (
     <div className="App">
       <img className="logo" src={padlock} alt="logo" />
+      <SignUp />
       <Routes>
         <Route path="/" element={<SignUp />} />
         <Route path="/signIn" element={<SignIn />} />
