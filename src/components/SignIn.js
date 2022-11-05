@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 import { InputPassword, InputEmail, Button, PASSWORD, EMAIL } from './validations';
@@ -35,15 +37,17 @@ const SignIn = () => {
           <span>Remember me</span>
         </p>
 
+        <Button disabled={!(PASSWORD.test(valuePassword) && EMAIL.test(valueEmail))}>
+          SIGN IN
+        </Button>
         <p className="wrapper-links">
+          <Link to={'*'} className="link">
+            Don't have an account? Sign Up
+          </Link>
           <a className="link" href="#">
             Forgot password?
           </a>
         </p>
-
-        <Button disabled={!(PASSWORD.test(valuePassword) && EMAIL.test(valueEmail))}>
-          SIGN IN
-        </Button>
       </form>
     </div>
   );
