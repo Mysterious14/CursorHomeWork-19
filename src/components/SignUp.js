@@ -72,7 +72,9 @@ const SignUp = () => {
         </Button>
 
         <p className="wrapper-links">
-          <Link to="/signIn">Already have an account? Sign in</Link>
+          <Link to="/signIn" className="link">
+            Already have an account? Sign in
+          </Link>
         </p>
       </form>
     </div>
